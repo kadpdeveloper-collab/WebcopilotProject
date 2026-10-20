@@ -1,0 +1,418 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+}
+
+header {
+    background: #f4f8fc;
+    color: #cb5a5a;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #1722eb;
+    padding: 0.5rem;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+nav a[aria-current="page"] {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+main {
+    width: min(100% - 2rem, 72rem);
+    margin: 1.5rem auto;
+}
+
+.about-sections {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.about-section {
+    min-width: 0;
+    padding: 1rem;
+    background: #f4f8fc;
+}
+
+.about-section ul {
+    padding-left: 1.25rem;
+}
+
+.updates-form {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.updates-form div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.updates-form input,
+.updates-form button {
+    min-height: 2.5rem;
+    padding: 0.5rem 0.75rem;
+    font: inherit;
+}
+
+.updates-form input {
+    flex: 1 1 14rem;
+    border: 1px solid #777;
+    border-radius: 0.25rem;
+}
+
+.updates-form button {
+    border: 0;
+    border-radius: 0.25rem;
+    background: #1722eb;
+    color: #fff;
+    cursor: pointer;
+}
+
+.updates-form button:hover,
+.updates-form button:focus-visible {
+    background: #1119b8;
+}
+
+.site-map ul {
+    display: block;
+    list-style: none;
+    background: transparent;
+    padding-left: 0;
+}
+
+.site-map a {
+    color: #1722eb;
+}
+
+.portfolio {
+    min-width: 0;
+    padding: 1rem;
+}
+
+.services {
+    min-width: 0;
+    padding: 1rem;
+}
+
+.services h2 {
+    margin-bottom: 1rem;
+    color: #1b2a3c;
+}
+
+.service-options {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+.service-option {
+    min-width: 0;
+    background: #f4f8fc;
+    border: 1px solid #d3dfe9;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.2rem 0.65rem rgba(23, 34, 235, 0.06);
+}
+
+.service-card {
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    min-width: 0;
+    padding: 1rem;
+}
+
+.service-visual {
+    min-width: 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.service-visual img {
+    display: block;
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(25, 39, 59, 0.08);
+}
+
+@media (max-width: 64rem) {
+    .service-visual img.consulting-service-image {
+        height: auto;
+        min-height: 0;
+        object-fit: contain;
+    }
+}
+
+.service-copy {
+    display: grid;
+    gap: 0.65rem;
+    min-width: 0;
+}
+
+.service-copy h3 {
+    color: #1b2a3c;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+}
+
+.service-copy label {
+    font-weight: 700;
+    color: #1b2a3c;
+}
+
+.service-option textarea {
+    width: 100%;
+    min-height: 8rem;
+    padding: 0.75rem;
+    border: 1px solid #777;
+    border-radius: 0.25rem;
+    font: inherit;
+    resize: vertical;
+    background: #fff;
+    color: #222;
+}
+
+.service-credit {
+    color: #3b4d5f;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+.service-credit a {
+    color: #1722eb;
+}
+
+.contact {
+    min-width: 0;
+    padding: 1rem;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1rem;
+    max-width: 42rem;
+    margin-top: 1rem;
+}
+
+.contact-field {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.contact-field input,
+.contact-field textarea {
+    width: 100%;
+    min-height: 2.5rem;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #777;
+    border-radius: 0.25rem;
+    font: inherit;
+}
+
+.contact-field textarea {
+    min-height: 9rem;
+    resize: vertical;
+}
+
+.service-types {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #b8c5d1;
+    border-radius: 0.25rem;
+}
+
+.service-types label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-form button {
+    justify-self: start;
+    min-height: 2.5rem;
+    padding: 0.5rem 1rem;
+    border: 0;
+    border-radius: 0.25rem;
+    background: #1722eb;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-form button:focus-visible {
+    background: #1119b8;
+}
+
+.project-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.portfolio-list-label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.portfolio-list {
+    display: block;
+    width: 100%;
+    min-height: 12rem;
+    margin-top: 0.35rem;
+    padding: 0.75rem;
+    border: 1px solid #777;
+    border-radius: 0.25rem;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+}
+
+.portfolio-type-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.portfolio-type-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+    padding: 0.75rem;
+    border: 1px solid #d3dfe9;
+    border-radius: 0.5rem;
+    background: #f4f8fc;
+}
+
+.portfolio-type-icon__symbol {
+    display: inline-grid;
+    flex: 0 0 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    border-radius: 50%;
+    background: #1722eb;
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.project-form div {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.project-form input,
+.project-form select,
+.project-form button {
+    min-height: 2.5rem;
+    padding: 0.5rem 0.75rem;
+    font: inherit;
+}
+
+.project-form input,
+.project-form select {
+    border: 1px solid #777;
+    border-radius: 0.25rem;
+}
+
+.project-form button {
+    border: 0;
+    border-radius: 0.25rem;
+    background: #1722eb;
+    color: #fff;
+    cursor: pointer;
+}
+
+.project-form button:hover,
+.project-form button:focus-visible {
+    background: #1119b8;
+}
+
+.project-categories {
+    display: grid;
+    gap: 1rem;
+}
+
+.project-categories section {
+    min-width: 0;
+    padding: 1rem;
+    background: #f4f8fc;
+}
+
+.project-categories ul {
+    padding-left: 1.25rem;
+}
+
+footer {
+    background-color: #f9f7f7;
+    color: #0875a5;
+    text-align: center;
+    padding: 1.25rem;
+}
+
+@media (min-width: 48rem) {
+    .about-sections {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-categories {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .service-card {
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.35fr);
+    }
+
+    .service-visual img {
+        height: 100%;
+        min-height: 18rem;
+    }
+}
+
+@media (max-width: 47.9375rem) {
+    .service-card {
+        grid-template-columns: 1fr;
+    }
+
+    .service-visual img {
+        height: 13rem;
+    }
+}

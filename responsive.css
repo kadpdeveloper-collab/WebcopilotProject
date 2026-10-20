@@ -1,0 +1,289 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+}
+
+header {
+    background: #f4f8fc;
+    color: #cb5a5a;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #1722eb;
+    padding: 0.5rem;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.service-carousel {
+    width: min(100% - 2rem, 72rem);
+    margin: 1.25rem auto 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.service-carousel__stage {
+    height: clamp(20rem, 38vw, 31rem);
+    overflow: hidden;
+    background: #1722eb;
+}
+
+.service-carousel__slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.service-carousel__slide[hidden] {
+    display: none;
+}
+
+.service-carousel__slide::after {
+    position: absolute;
+    inset: 35% 0 0;
+    background: linear-gradient(transparent, rgb(0 0 0 / 82%));
+    content: "";
+    pointer-events: none;
+}
+
+.service-carousel__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-carousel__caption {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem 1.5rem;
+    color: #fff;
+}
+
+.service-carousel__caption h2 {
+    max-width: 42rem;
+    margin-bottom: 0.2rem;
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+    line-height: 1.15;
+}
+
+.service-carousel__caption > p:not(.service-carousel__credit) {
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+}
+
+.service-carousel__credit {
+    margin-top: 0.55rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.service-carousel__credit a {
+    color: #fff;
+    text-underline-offset: 0.15em;
+}
+
+.service-carousel__credit a:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.service-carousel__controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f4f8fc;
+    border-bottom: 3px solid #1722eb;
+}
+
+.service-carousel__controls button {
+    min-height: 2.5rem;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid #1722eb;
+    border-radius: 0.25rem;
+    background: #1722eb;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.service-carousel__controls button:hover {
+    background: #1119b8;
+}
+
+.service-carousel__controls button:focus-visible {
+    outline: 3px solid #cb5a5a;
+    outline-offset: 2px;
+}
+
+.service-carousel__status {
+    min-width: 9rem;
+    color: #222;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    gap: 1.25rem;
+    width: min(100% - 2rem, 72rem);
+    margin: 1.5rem auto;
+}
+
+main section,
+main aside {
+    min-width: 0;
+    padding: 1rem;
+}
+
+main aside {
+    background: #f4f8fc;
+}
+
+.portfolio {
+    grid-column: 1 / -1;
+    scroll-margin-top: 1rem;
+}
+
+#portfolio:target {
+    outline: 3px solid #1722eb;
+    outline-offset: 0.25rem;
+}
+
+.project-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.project-form div {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.project-form input,
+.project-form select,
+.project-form button {
+    min-height: 2.5rem;
+    padding: 0.5rem 0.75rem;
+    font: inherit;
+}
+
+.project-form input,
+.project-form select {
+    border: 1px solid #777;
+    border-radius: 0.25rem;
+}
+
+.project-form button {
+    border: 0;
+    border-radius: 0.25rem;
+    background: #1722eb;
+    color: #fff;
+    cursor: pointer;
+}
+
+.project-form button:hover,
+.project-form button:focus-visible {
+    background: #1119b8;
+}
+
+.project-categories {
+    display: grid;
+    gap: 1rem;
+}
+
+.project-categories section {
+    padding: 1rem;
+    background: #f4f8fc;
+}
+
+.project-categories ul {
+    padding-left: 1.25rem;
+}
+
+footer {
+    background-color: #f9f7f7;
+    color: #0875a5;
+    text-align: center;
+    padding: 1.25rem;
+}
+
+@media (min-width: 48rem) {
+    main {
+        grid-template-columns: minmax(0, 2fr) minmax(14rem, 1fr);
+        align-items: start;
+    }
+
+    .project-categories {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 36rem) {
+    .service-carousel__stage {
+        height: 22rem;
+    }
+
+    .service-carousel__caption {
+        padding: 1rem;
+    }
+
+    .service-carousel__caption h2 {
+        font-size: 1.55rem;
+    }
+
+    .service-carousel__controls {
+        gap: 0.5rem;
+    }
+
+    .service-carousel__controls button {
+        flex: 1 1 auto;
+    }
+
+    .service-carousel__status {
+        order: 1;
+        flex-basis: 100%;
+    }
+}

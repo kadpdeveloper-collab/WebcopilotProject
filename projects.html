@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Projects | Responsive Web Site</title>
+    <link rel="stylesheet" href="project.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Responsive Web Design Example</h1>
+    </header>
+    <nav aria-label="Main menu">
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html" aria-current="page">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="portfolio">
+        <h2>Portfolio Projects</h2>
+        <label class="portfolio-list-label" for="portfolio-list">
+          Project categories and examples
+        </label>
+        <textarea
+          id="portfolio-list"
+          class="portfolio-list"
+          name="portfolio-list"
+          rows="8"
+        >
+1. Network Infrastructure Projects
+2. Cloud Implementation Projects
+3. Software Development Projects
+   3.1 Warehouse Inventory System
+   3.2 Enterprise PMO AI
+4. Web Development Projects</textarea
+        >
+        <div class="portfolio-type-icons" aria-label="Project type icons">
+          <div class="portfolio-type-icon">
+            <span class="portfolio-type-icon__symbol" aria-hidden="true"
+              >⇄</span
+            >
+            <span>Network Implementation Projects</span>
+          </div>
+          <div class="portfolio-type-icon">
+            <span class="portfolio-type-icon__symbol" aria-hidden="true"
+              >▤</span
+            >
+            <span>Consulting Project Management</span>
+          </div>
+          <div class="portfolio-type-icon">
+            <span class="portfolio-type-icon__symbol" aria-hidden="true"
+              >&lt;/&gt;</span
+            >
+            <span>Software Development Projects</span>
+          </div>
+          <div class="portfolio-type-icon">
+            <span class="portfolio-type-icon__symbol" aria-hidden="true"
+              >▣</span
+            >
+            <span>Web Development Projects</span>
+          </div>
+        </div>
+        <form id="project-form" class="project-form">
+          <div>
+            <label for="project-name">Project name</label>
+            <input
+              id="project-name"
+              name="project-name"
+              type="text"
+              maxlength="100"
+              required
+            />
+          </div>
+          <div>
+            <label for="project-category">Methodology</label>
+            <select id="project-category" name="project-category">
+              <option value="agile">Agile</option>
+              <option value="waterfall">Waterfall</option>
+              <option value="hybrid">Hybrid</option>
+            </select>
+          </div>
+          <button type="submit">Add project</button>
+        </form>
+        <div class="project-categories">
+          <section aria-labelledby="agile-heading">
+            <h3 id="agile-heading">Agile</h3>
+            <ul id="agile-projects" aria-live="polite"></ul>
+          </section>
+          <section aria-labelledby="waterfall-heading">
+            <h3 id="waterfall-heading">Waterfall</h3>
+            <ul id="waterfall-projects" aria-live="polite"></ul>
+          </section>
+          <section aria-labelledby="hybrid-heading">
+            <h3 id="hybrid-heading">Hybrid</h3>
+            <ul id="hybrid-projects" aria-live="polite"></ul>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Responsive Web Design Example. All rights reserved.</p>
+    </footer>
+    <script src="responsive.js"></script>
+  </body>
+</html>

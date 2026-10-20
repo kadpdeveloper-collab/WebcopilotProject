@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Web Site</title>
+    <link rel="stylesheet" href="responsive.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Responsive Web Design Example</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="services.html" target="_self">Services</a></li>
+        <li><a href="projects.html" target="_self">Portfolio</a></li>
+        <li><a href="contact.html" target="_self">Contact</a></li>
+      </ul>
+    </nav>
+    <section
+      class="service-carousel"
+      data-service-carousel
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Featured services"
+    >
+      <h2 class="visually-hidden">Featured services</h2>
+      <div class="service-carousel__stage">
+        <figure
+          class="service-carousel__slide"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="1 of 3"
+        >
+          <img
+            class="service-carousel__image"
+            src="assets/cloud-solutions.jpg"
+            alt="Rows of blue-lit network server racks in a data center."
+            width="1280"
+            height="720"
+          />
+          <figcaption class="service-carousel__caption">
+            <h2>Cloud Solutions</h2>
+            <p>Secure infrastructure, ready to scale.</p>
+            <p class="service-carousel__credit">
+              Image by
+              <a
+                href="https://commons.wikimedia.org/wiki/File:BalticServers_data_center.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >BalticServers.com</a
+              >,
+              <a
+                href="https://creativecommons.org/licenses/by-sa/3.0/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >CC BY-SA 3.0</a
+              >
+            </p>
+          </figcaption>
+        </figure>
+        <figure
+          class="service-carousel__slide"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="2 of 3"
+          hidden
+          aria-hidden="true"
+        >
+          <img
+            class="service-carousel__image"
+            src="assets/consulting-project-management.jpg"
+            alt="A project team discusses sticky-note tasks arranged in columns on an office board."
+            width="1650"
+            height="1113"
+          />
+          <figcaption class="service-carousel__caption">
+            <h2>Consulting Project Management</h2>
+            <p>Clear plans, confident delivery.</p>
+            <p class="service-carousel__credit">
+              Image by
+              <a
+                href="https://commons.wikimedia.org/wiki/File:H%E1%BB%8Dp_nh%C3%B3m_scrum_h%C3%A0ng_ng%C3%A0y.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Nghungdo</a
+              >,
+              <a
+                href="https://creativecommons.org/licenses/by-sa/4.0/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >CC BY-SA 4.0</a
+              >
+            </p>
+          </figcaption>
+        </figure>
+        <figure
+          class="service-carousel__slide"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="3 of 3"
+          hidden
+          aria-hidden="true"
+        >
+          <img
+            class="service-carousel__image"
+            src="assets/ai-software-development.jpg"
+            alt="A software developer writing and reviewing code at a computer."
+            width="1280"
+            height="720"
+          />
+          <figcaption class="service-carousel__caption">
+            <h2>Software Development with AI</h2>
+            <p>Build smarter tools with thoughtful AI integration.</p>
+            <p class="service-carousel__credit">
+              Image by
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Programmer_writing_code_with_Unit_Tests.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Joonspoon</a
+              >,
+              <a
+                href="https://creativecommons.org/licenses/by-sa/4.0/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >CC BY-SA 4.0</a
+              >
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      <div
+        class="service-carousel__controls"
+        role="group"
+        aria-label="Slideshow controls"
+        hidden
+      >
+        <button type="button" data-carousel-previous>Previous</button>
+        <p
+          class="service-carousel__status"
+          data-carousel-status
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          Slide 1 of 3: Cloud Solutions
+        </p>
+        <button type="button" data-carousel-toggle>Pause slideshow</button>
+        <button type="button" data-carousel-next>Next</button>
+      </div>
+    </section>
+    <main>
+      <section>
+        <h2>Technology that moves your business forward</h2>
+        <p>
+          We help organizations plan, build, and improve the technology they
+          rely on. From cloud solutions and project management to AI-enabled
+          software, our focus is on practical solutions that fit your goals and
+          can grow with your business.
+        </p>
+      </section>
+      <aside>
+        <h3>How we can help</h3>
+        <ul>
+          <li>
+            Plan and deliver projects using Agile, Waterfall, or hybrid
+            approaches.
+          </li>
+          <li>Modernize infrastructure and move workloads to the cloud.</li>
+          <li>
+            Develop software and explore useful, responsible AI capabilities.
+          </li>
+        </ul>
+        <p>
+          <a href="services.html">Explore our services</a>
+          <span aria-hidden="true"> | </span>
+          <a href="contact.html">Tell us what you need</a>
+        </p>
+      </aside>
+    </main>
+    <footer>
+      <p>&copy; 2024 Responsive Web Design Example. All rights reserved.</p>
+    </footer>
+    <script src="responsive.js"></script>
+  </body>
+</html>

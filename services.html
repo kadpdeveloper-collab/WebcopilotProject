@@ -1,0 +1,167 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Responsive Web Site</title>
+    <link rel="stylesheet" href="project.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Responsive Web Design Example</h1>
+    </header>
+    <nav aria-label="Main menu">
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="services.html" aria-current="page">Services</a></li>
+        <li><a href="projects.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="services" aria-labelledby="services-heading">
+        <h2 id="services-heading">Services</h2>
+        <div class="service-options">
+          <section class="service-option" aria-labelledby="software-heading">
+            <div class="service-card">
+              <figure class="service-visual">
+                <img
+                  src="assets/cloud-solutions.jpg"
+                  alt="Rows of blue-lit network server racks in a data center."
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                />
+                <figcaption class="service-credit">
+                  Image by
+                  <a
+                    href="https://commons.wikimedia.org/wiki/File:BalticServers_data_center.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >BalticServers.com</a
+                  >,
+                  <a
+                    href="https://creativecommons.org/licenses/by-sa/3.0/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >CC BY-SA 3.0</a
+                  >
+                </figcaption>
+              </figure>
+              <div class="service-copy">
+                <h3 id="software-heading">Cloud Solutions</h3>
+                <label for="software-description">Service description</label>
+                <textarea
+                  id="software-description"
+                  name="software-description"
+                  rows="5"
+                  placeholder="Describe the software development service..."
+                >
+Design secure, scalable cloud solutions tailored to your organization. We can help you plan a migration, modernize existing infrastructure, and optimize reliability, performance, and costs.</textarea
+                >
+              </div>
+            </div>
+          </section>
+
+          <section class="service-option" aria-labelledby="consulting-heading">
+            <div class="service-card">
+              <figure class="service-visual">
+                <img
+                  src="assets/consulting-project-management.jpg"
+                  class="consulting-service-image"
+                  alt="A project team discusses sticky-note tasks arranged in columns on an office board."
+                  width="1650"
+                  height="1113"
+                  loading="lazy"
+                />
+                <figcaption class="service-credit">
+                  Image by
+                  <a
+                    href="https://commons.wikimedia.org/wiki/File:H%E1%BB%8Dp_nh%C3%B3m_scrum_h%C3%A0ng_ng%C3%A0y.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Nghungdo</a
+                  >,
+                  <a
+                    href="https://creativecommons.org/licenses/by-sa/4.0/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >CC BY-SA 4.0</a
+                  >
+                </figcaption>
+              </figure>
+              <div class="service-copy">
+                <h3 id="consulting-heading">Consulting Project Management</h3>
+                <label for="consulting-description">Service description</label>
+                <textarea
+                  id="consulting-description"
+                  name="consulting-description"
+                  rows="5"
+                  placeholder="Describe the project management consulting service..."
+                >
+Get expert support to plan and deliver projects with confidence. We can help define scope, build realistic schedules, coordinate teams, track risks, and improve delivery using Agile, Waterfall, or hybrid methods.</textarea
+                >
+              </div>
+            </div>
+          </section>
+
+          <section class="service-option" aria-labelledby="ai-heading">
+            <div class="service-card">
+              <figure class="service-visual">
+                <img
+                  src="assets/ai-software-development.jpg"
+                  alt="A software developer writing and reviewing code at a computer."
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                />
+                <figcaption class="service-credit">
+                  Image by
+                  <a
+                    href="https://commons.wikimedia.org/wiki/File:Programmer_writing_code_with_Unit_Tests.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Joonspoon</a
+                  >,
+                  <a
+                    href="https://creativecommons.org/licenses/by-sa/4.0/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >CC BY-SA 4.0</a
+                  >
+                </figcaption>
+              </figure>
+              <div class="service-copy">
+                <h3 id="ai-heading">Software Development with AI</h3>
+                <label for="ai-description">Service description</label>
+                <textarea
+                  id="ai-description"
+                  name="ai-description"
+                  rows="5"
+                  placeholder="Describe the AI-enabled software development service..."
+                >
+Build useful software with AI thoughtfully integrated into the product and development process. We can help assess use cases, design and implement AI-enabled features, and prioritize security, privacy, quality, and maintainability.</textarea
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Responsive Web Design Example. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

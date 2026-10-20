@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Responsive Web Site</title>
+    <link rel="stylesheet" href="project.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Responsive Web Design Example</h1>
+    </header>
+    <nav aria-label="Main menu">
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="about_us.html" aria-current="page">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>About Us</h2>
+      <div class="about-sections">
+        <section class="about-section" aria-labelledby="updates-heading">
+          <h3 id="updates-heading">Sign Up for Updates</h3>
+          <p>Get news and updates delivered to your inbox.</p>
+          <form class="updates-form" action="#" method="get">
+            <label for="updates-email">Email address</label>
+            <div>
+              <input
+                id="updates-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              />
+              <button type="submit">Sign up</button>
+            </div>
+          </form>
+        </section>
+        <section class="about-section" aria-labelledby="cases-heading">
+          <h3 id="cases-heading">Cases of Study</h3>
+          <ul>
+            <li>
+              Cloud solutions: planning and delivering a scalable cloud
+              environment.
+            </li>
+            <li>
+              Project management: coordinating delivery across teams and
+              milestones.
+            </li>
+            <li>
+              AI software development: incorporating AI capabilities into an
+              application.
+            </li>
+          </ul>
+        </section>
+        <section class="about-section" aria-labelledby="posts-heading">
+          <h3 id="posts-heading">Recent Posts</h3>
+          <ul>
+            <li>Choosing a project management approach</li>
+            <li>Planning a move to cloud solutions</li>
+            <li>Getting started with AI in software development</li>
+          </ul>
+        </section>
+        <nav class="about-section site-map" aria-labelledby="site-map-heading">
+          <h3 id="site-map-heading">Site Map</h3>
+          <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Responsive Web Design Example. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

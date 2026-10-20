@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Responsive Web Site</title>
+    <link rel="stylesheet" href="project.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Responsive Web Design Example</h1>
+    </header>
+    <nav aria-label="Main menu">
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Portfolio</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form" method="post">
+          <div class="contact-field">
+            <label for="contact-name">Name</label>
+            <input
+              id="contact-name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="contact-field">
+            <label for="contact-email">Email</label>
+            <input
+              id="contact-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <fieldset class="service-types">
+            <legend>Type of service required</legend>
+            <label>
+              <input type="checkbox" name="service" value="cloud-solutions" />
+              Cloud solutions
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="service"
+                value="software-development"
+              />
+              Software development
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="service"
+                value="consulting-project-management"
+              />
+              Consulting project management
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="service"
+                value="network-implementation"
+              />
+              Network Implementation
+            </label>
+          </fieldset>
+          <div class="contact-field">
+            <label for="need-description">Description of need</label>
+            <textarea
+              id="need-description"
+              name="description"
+              rows="6"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Send request</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Responsive Web Design Example. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
